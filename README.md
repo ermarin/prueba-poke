@@ -18,5 +18,9 @@ You may also see any lint errors in the console.
 
 ## Stack
 
-React 19
+React 19.\
 Tailwind v3
+
+
+## URL DEPLOY
+https://prueba-poke-phi.vercel.app/
