@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import PokemonList from './PokemonList';
+import PokemoSearch from './components/PokemonSearch';
 
 function App() {
+  const [query, setQuery] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-gradient-to-br from-green-300 to-blue-400 p-6">
+      <h1 className="text-4xl font-bold text-center mb-6">Pokédex</h1>
+      <PokemoSearch onSearch={setQuery} />
+      <PokemonList query={query} />
     </div>
   );
 }
